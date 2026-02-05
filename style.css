@@ -76,6 +76,26 @@ body {
     transform: translateY(-1px);
 }
 
+#contact-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    color: var(--sidebar-text);
+    border: 1px solid var(--sidebar-hover);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+#contact-btn:hover {
+    background-color: var(--sidebar-hover);
+}
+
 .note-list {
     flex: 1;
     list-style: none;
@@ -225,6 +245,64 @@ body {
     padding: 24px;
     overflow-y: auto;
     flex: 1;
+}
+
+/* Contact Section Styles */
+.contact-pane {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    overflow-y: auto;
+}
+
+.contact-container {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+}
+
+.contact-container h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-container p {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
 }
 
 /* Markdown Styling */

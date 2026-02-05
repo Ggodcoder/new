@@ -19,6 +19,7 @@
             </div>
             <div class="sidebar-actions">
                 <button id="new-note-btn"><i class="fas fa-plus"></i> 새 노트</button>
+                <button id="contact-btn"><i class="fas fa-envelope"></i> 제휴 문의</button>
             </div>
             <ul id="note-list" class="note-list">
                 <!-- Notes will be loaded here -->
@@ -43,6 +44,27 @@
                     <div id="markdown-preview" class="markdown-body"></div>
                 </section>
             </div>
+            <section id="contact-section" class="contact-pane" style="display: none;">
+                <div class="contact-container">
+                    <h2><i class="fas fa-handshake"></i> 제휴 문의</h2>
+                    <p>협업 및 제휴 제안을 남겨주시면 검토 후 연락드리겠습니다.</p>
+                    <form action="https://formspree.io/f/xgolwzpg" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <label for="email">이메일 주소</label>
+                            <input type="email" id="email" name="email" placeholder="example@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">문의 제목</label>
+                            <input type="text" id="subject" name="subject" placeholder="제휴 제안 제목" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">문의 내용</label>
+                            <textarea id="message" name="message" rows="5" placeholder="상세 내용을 입력해주세요..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">문의 보내기</button>
+                    </form>
+                </div>
+            </section>
         </main>
     </div>
 
