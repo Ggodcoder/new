@@ -6,30 +6,42 @@
     <title>Markdown Note Editor</title>
     <!-- EasyMDE CSS -->
     <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="app-container">
         <aside class="sidebar">
-            <h1>내 노트</h1>
-            <button id="new-note-btn">새 노트</button>
-            <ul id="note-list">
+            <div class="sidebar-header">
+                <h1><i class="fas fa-feather-alt"></i> Notes</h1>
+            </div>
+            <div class="sidebar-actions">
+                <button id="new-note-btn"><i class="fas fa-plus"></i> 새 노트</button>
+            </div>
+            <ul id="note-list" class="note-list">
                 <!-- Notes will be loaded here -->
             </ul>
         </aside>
-        <main class="content">
-            <div class="editor-section">
-                <input type="text" id="note-title" placeholder="노트 제목">
-                <textarea id="markdown-editor"></textarea>
-                <div class="editor-actions">
-                    <button id="save-note-btn">노트 저장</button>
-                    <button id="delete-note-btn" class="delete-button" style="display: none;">노트 삭제</button>
+        <main class="main-content">
+            <header class="content-header">
+                <input type="text" id="note-title" placeholder="노트 제목을 입력하세요...">
+                <div class="header-actions">
+                    <button id="save-note-btn" class="btn-primary"><i class="fas fa-save"></i> 저장</button>
+                    <button id="delete-note-btn" class="btn-danger" style="display: none;"><i class="fas fa-trash"></i> 삭제</button>
                 </div>
-            </div>
-            <div class="preview-section">
-                <h2>미리보기</h2>
-                <div id="markdown-preview"></div>
+            </header>
+            <div class="workspace">
+                <section class="editor-pane">
+                    <textarea id="markdown-editor"></textarea>
+                </section>
+                <section class="preview-pane">
+                    <div class="preview-header">
+                        <i class="fas fa-eye"></i> 실시간 미리보기
+                    </div>
+                    <div id="markdown-preview" class="markdown-body"></div>
+                </section>
             </div>
         </main>
     </div>
