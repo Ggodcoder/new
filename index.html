@@ -1,14 +1,44 @@
-<h1 id="title">Knowledge Note</h1>
-<button>Subject</button>
-<button>Topic</button>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Note Editor</title>
+    <!-- EasyMDE CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/easymde/dist/easymde.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h1>내 노트</h1>
+            <button id="new-note-btn">새 노트</button>
+            <ul id="note-list">
+                <!-- Notes will be loaded here -->
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="editor-section">
+                <input type="text" id="note-title" placeholder="노트 제목">
+                <textarea id="markdown-editor"></textarea>
+                <div class="editor-actions">
+                    <button id="save-note-btn">노트 저장</button>
+                    <button id="delete-note-btn" class="delete-button" style="display: none;">노트 삭제</button>
+                </div>
+            </div>
+            <div class="preview-section">
+                <h2>미리보기</h2>
+                <div id="markdown-preview"></div>
+            </div>
+        </main>
+    </div>
 
-<style>
-    #title {
-        color: blue;
-        align-items: center;
-    }
-
-    button {
-        color: red;
-    }
-</style>
+    <!-- EasyMDE JS -->
+    <script src="https://unpkg.com/easymde/dist/easymde.min.js"></script>
+    <!-- Marked.js for Markdown parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
